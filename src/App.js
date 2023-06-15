@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import MainContent from "./components/MainContent";
+import Nav from "./components/Nav";
+import Suggest from "./components/Suggest";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="flex">
+            {/* Nav */}
+            <Nav />
+            {/* Main */}
+            <div className="xl:flex items-start justify-center gap-x-[67px] w-full">
+                <MainContent />
+                {/* Suggest */}
+                <Suggest />
+            </div>
+        </div>
+    );
 }
 
 export default App;
